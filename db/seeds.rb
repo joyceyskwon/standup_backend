@@ -38,3 +38,20 @@ User.create!([{
   location: Faker::Nation.capital_city,
 }])
 puts "created users"
+
+puts "destroy posts"
+Post.destroy_all
+puts "creating posts"
+
+posts = [
+  'Go to the post office, Respond to emails, Build API, Take out trash',
+  'Design logo, Make prototype, Get Leo food, Pay phone bill',
+  'Read Harry Potter, Study for dark magic potion class final, Memorize spells, Practice for the Quidditch'
+]
+
+posts.each do |post|
+  user_id = User.all.sample.id
+  Post.create(user_id: user_id, content: post)
+end
+
+puts "created posts"
