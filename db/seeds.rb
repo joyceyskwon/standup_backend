@@ -12,7 +12,7 @@ User.destroy_all
 puts "creating users"
 User.create!([{
   email: 'joyceyskwon@gmail.com',
-  password: "1234",
+  password: "Welcome@1",
   username: Faker::Games::Fallout.character,
   first_name: 'Joyce',
   last_name: 'Kwon',
@@ -21,7 +21,7 @@ User.create!([{
 },
 {
   email: Faker::Name.unique.first_name.downcase.strip + '@gmail.com',
-  password: "1234",
+  password: "Welcome@1",
   username: Faker::Games::Fallout.character,
   first_name: Faker::Name.unique.first_name,
   last_name: Faker::Name.unique.last_name,
@@ -30,7 +30,7 @@ User.create!([{
 },
 {
   email: Faker::Name.unique.first_name.downcase.strip + '@gmail.com',
-  password: "1234",
+  password: "Welcome@1",
   username: Faker::Games::Fallout.character,
   first_name: Faker::Name.unique.first_name,
   last_name: Faker::Name.unique.last_name,
