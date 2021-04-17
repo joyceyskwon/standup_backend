@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   # has_secure_password
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
 
   has_many :posts
 end
